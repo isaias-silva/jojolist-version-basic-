@@ -1,7 +1,9 @@
 # jojolist
 <hr>
 <h2>⚠️application in development⚠️</h2>
+<p>frontend in progress!</p>
 <hr>
+
 <table>
   <tr>
     <th>version</th>
