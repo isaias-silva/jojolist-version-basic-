@@ -26,21 +26,24 @@
          <div id="flexbox">
          <aside>
            <div id="standlist">
-          <h3><img src="./img/letter.png" alt="icon"> stands<img src="./img/letter.png" alt="icon"> </h3>
+
+            <h3><img src="./img/letter.png" alt="icon"> stands<img src="./img/letter.png" alt="icon"> </h3>
            
         
-            <ul>
-                <li>starplatinum</li>
-    
+            <ul id="list">
+                <li value="1" onclick="load(this.value)">starplatinum</li>
+                <li value="0" onclick="load(this.value)">the world</li>
             </ul>
            </div>
         </aside>
-        <section>
+        <section id="section">
+           
        
             <div id="standcard">
+              
                 <div class="bloco">
                    <div id="standimage">
-                       <img src="./imagens_teste/ZaWarudo.png" alt="stand">
+                    <img src="./imagens_teste/starplatinum.png" alt="imagestand" id="img" >
                  </div>
                 </div>
                
@@ -57,7 +60,7 @@
                     <div id="standinfo">
                     <p>user: <spam id="user"></spam></p>
                     <p>name: <spam id="stand"></spam></p>
-                    <p>part <spam id="part"></spam></p>
+                    <p>habilit: <spam id="desc"></spam></p>
                     </div>
                 </div>
            </div>

@@ -133,9 +133,14 @@ section {
     width: 100%;
     padding-bottom: 5px;
     background-color: rgba(128, 0, 128, 0.316);
+    background-image: url(../img/symbol.png);
     margin: auto;
     margin-left: 15px;
     border-radius: 20px;
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.25s ease-in-out;
 }
 
 #standcard {
@@ -149,6 +154,7 @@ section {
     border-radius: 30px;
     border: 1px solid black;
     display: flex;
+    transition: 0.25s ease-in-out;
 }
 
 .bloco {
@@ -168,6 +174,8 @@ section {
     border-radius: 30px;
     text-align: center;
     background-image: url('../img/background.png');
+    animation: anim-stars linear 60s infinite running;
+    background-position: 0%;
 }
 
 .second {
@@ -186,7 +194,6 @@ section {
     box-sizing: border-box;
     flex-shrink: 0;
     background-color: black;
-    
 }
 
 #standstats img {
@@ -214,8 +221,8 @@ section {
 }
 
 #standstats canvas {
-  filter:opacity(50%);
-  background-color: rgba(128, 0, 128, 0.357);
+    filter: opacity(50%);
+    background-color: rgba(128, 0, 128, 0.357);
     position: absolute;
     top: 0;
     left: 0;
@@ -223,6 +230,12 @@ section {
     height: 100%;
     border-radius: 20px;
 }
+
+#img {
+    transition: 0.25s ease-in-out;
+}
+
+
 
 /*footer*/
 
@@ -245,6 +258,12 @@ footer {
     color: white;
 }
 
+#desc, #user, #stand {
+    font-size: 16px;
+    text-shadow: none;
+    font-weight: normal;
+}
+
 @media (max-width: 910px) {
     * {
         padding: 0;
@@ -256,11 +275,11 @@ footer {
     }
     aside {
         width: 100%;
-        height: 100px;
+        height: 500px;
         border-radius: 0;
     }
     #flexbox {
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin: auto;
         position: relative;
         top: 0;
@@ -298,6 +317,7 @@ footer {
     }
 }
 
+
 @keyframes img {
     0% {
         transform: scale(1);
@@ -307,5 +327,16 @@ footer {
     }
     100% {
         transform: scale(1);
+    }
+}
+
+@keyframes anim-stars {
+    0% {
+        background-position-y: 0%;
+        background-position-x: 0%;
+    }
+    100% {
+        background-position-y: -1000%;
+        background-position-x: -1000%;
     }
 }
