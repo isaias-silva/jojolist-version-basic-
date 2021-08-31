@@ -67,8 +67,8 @@ new Stand(2, 'starplatinum', 'jotaro kujo', 'super strength and stop time', {
     speed: [220, 55],//a
     range: [195, 85],//C
     durability: [150, 112],//a
-    precision: [100, 90],//b
-    potential: [100, 60]//b
+    precision: [80, 95],//a
+    potential: [85, 55]//
 }, './imagens_teste/starplatinum.png', 'blue')
 ]
 
@@ -77,6 +77,7 @@ new Stand(2, 'starplatinum', 'jotaro kujo', 'super strength and stop time', {
 
 function setGraf(ps) {
     const graf = document.getElementById("status");
+
 
     let ctx = graf.getContext("2d");
     let p = stands[ps].stats.potential;
@@ -91,6 +92,7 @@ function setGraf(ps) {
 
 
 
+    ctx.clearRect(0, 0, graf.width, graf.height);
 
     ctx.fillStyle = stands[ps].color;
     ctx.beginPath();
