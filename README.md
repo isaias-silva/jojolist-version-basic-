@@ -28,14 +28,24 @@
   </tr>
   <tr>
     <td>POWER</td>
+  </tr>
+  <tr>
 <td>SPEED</td>
-    <td>RANGE</td>
-<td>DURABILITY</td>
-    <td>PRECISION</td>
-    <td>POWER</td>
+  </tr>
+  <tr>
+  <td>RANGE</td>
+</tr>
+  <tr>  
+  <td>DURABILITY</td>
+   </tr>
+  <tr>  
+  <td>PRECISION</td>
+   </tr>
+  <tr>  
+  <td>POWER</td>
+    </tr>
+  <tr>
 <td>POTENTIAL</td>
-
-
     
   </tr>
 </table>
