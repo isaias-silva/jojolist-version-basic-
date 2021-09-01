@@ -235,8 +235,13 @@ section {
     transition: 0.25s ease-in-out;
 }
 
-
-
+#search{border:1px solid pink;
+    transition: 0.25s ease-in-out;
+    background-color: rgb(255, 0, 255);
+    color:azure;
+    font-weight: bold;
+}
+#search:focus{background-color: purple;}
 /*footer*/
 
 footer {

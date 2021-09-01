@@ -75,6 +75,38 @@ new Stand(2, 'starplatinum', 'jotaro kujo', 'super strength and stop time', {
 
 
 
+/*conectando a API
+
+function apistart() {
+    const url = 'http://localhost:8080/start/api'
+
+    fetch(url).then((res) => {
+        return res.json()
+    }).then((data) => {
+        for (let i in data) {
+            stands[i] = new Stand(data[i].id,
+                data[i].name,
+                data[i].user,
+                data[i].desc,
+                data[i].stats,
+                data[i].image,
+                data[i].color
+
+            );
+        }
+
+        control()
+    }).catch((err) => {
+
+        document.getElementById('section').style.display = "none"
+        document.getElementById('standlist').style.display = "none"
+
+
+    })
+}*/
+
+
+
 function setGraf(ps) {
     const graf = document.getElementById("status");
 
@@ -143,14 +175,14 @@ function load(p) {
 
 
 
-   
+
     section.style.filter = "invert(100)"
     section.style.backgroundSize = "60%"
     standcard.style.filter = "opacity(0)"
-   
-   
-   
-   
+
+
+
+
 
     setTimeout(loadenter, 1000)
 
@@ -159,10 +191,11 @@ function load(p) {
         section.style.filter = "invert(0)"
         standcard.style.filter = "opacity(1)"
         img.setAttribute('src', stands[p].srci);
+
         desc.innerHTML = stands[p].desc;
         standname.innerHTML = stands[p].name;
         standuser.innerHTML = stands[p].user;
-
+     
         setGraf(p)
     }
 
@@ -189,20 +222,51 @@ function control() {
 }
 
 
-function createlist(){
+function createlist() {
     let list = document.getElementById('list')
-    for(let i in stands){
+    for (let i in stands) {
         // <li value="1" onclick="load(this.value)">starplatinum</li>
-     let li=document.createElement('li');
-     li.setAttribute('value',i);
-     li.setAttribute('onclick','load(this.value)')
-     list.appendChild(li);
-     li.innerHTML=stands[i].name;
-     
-     
-     }
+        let li = document.createElement('li');
+        li.setAttribute('value', i);
+        li.setAttribute('onclick', 'load(this.value)')
+        list.appendChild(li);
+        li.innerHTML = stands[i].name;
+
+
+    }
 }
 
+function sch(s) {
+    let list = document.getElementById('list')
+    list.innerHTML=""
+    let result = []
+    let indexoff=[]
+   
+    for (let i in stands) {
+        if (stands[i].name.includes(s)) {
+           result.push(stands[i])
+            result= result.filter((x,y)=>result.indexOf(x)===y)
+
+            indexoff.push(stands.indexOf(stands[i]))
+        
+
+        }else{
+            result.splice(i,1)
+        }
+    }
+
+    for (let i in result) {
+        // <li value="1" onclick="load(this.value)">starplatinum</li>
+        let li = document.createElement('li');
+        li.setAttribute('value', indexoff[i]);
+        li.setAttribute('onclick', 'load(this.value)')
+        list.appendChild(li);
+        li.innerHTML = result[i].name;
 
 
+    }
+    
+}
+
+control();
 
