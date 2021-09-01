@@ -53,7 +53,11 @@ class Stand {
 
 
 
+<<<<<<< HEAD
 const stands = [new Stand(1, 'the world', 'dio brando', 'super strength stop time', {
+=======
+const stands = [new Stand(1, 'zawarudo', 'dio brando', 'super strength stop time', {
+>>>>>>> 8faca732270f1c04b6f6d114493822d67a6ea37a
     power: [150, 35],//a
     speed: [220, 55],//a
     range: [195, 85],//C
@@ -130,6 +134,7 @@ function load(p) {
     let standcard = document.getElementById('standcard')
     let section = document.getElementById('section')
     let img = document.getElementById('img')
+<<<<<<< HEAD
 
 
 
@@ -140,6 +145,18 @@ function load(p) {
 
 
 
+=======
+    
+
+   
+    section.style.filter = "invert(100)"
+    section.style.backgroundSize = "60%"
+    standcard.style.filter = "opacity(0)"
+   
+   
+   
+   
+>>>>>>> 8faca732270f1c04b6f6d114493822d67a6ea37a
     setTimeout(loadenter, 1000)
 
     function loadenter() {
@@ -155,6 +172,7 @@ function load(p) {
     }
 
 }
+<<<<<<< HEAD
 function createlist() {
     let list = document.getElementById('list')
     for (let i in stands) {
@@ -175,4 +193,23 @@ function control() {
     createlist();
 }
 
+=======
+function createlist(){
+    let list = document.getElementById('list')
+    for(let i in stands){
+        // <li value="1" onclick="load(this.value)">starplatinum</li>
+     let li=document.createElement('li');
+     li.setAttribute('value',i);
+     li.setAttribute('onclick','load(this.value)')
+     list.appendChild(li);
+     li.innerHTML=stands[i].name;
+     
+     
+     }
+}
+
+
+load(0);
+createlist();
+>>>>>>> 8faca732270f1c04b6f6d114493822d67a6ea37a
 
