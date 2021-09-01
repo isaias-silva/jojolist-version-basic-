@@ -1,5 +1,5 @@
 # jojolist
-main
+
 <hr>
 <h2>⚠️application in development⚠️</h2>
 <p>frontend so so complete!</p>
