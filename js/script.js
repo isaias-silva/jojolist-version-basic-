@@ -53,33 +53,16 @@ class Stand {
 
 
 
-const stands = [new Stand(1, 'zawarudo', 'dio brando', 'super strength stop time', {
-    power: [150, 35],//a
-    speed: [220, 55],//a
-    range: [195, 85],//C
-    durability: [150, 112],//a
-    precision: [100, 90],//b
-    potential: [100, 60]//b
-}, './imagens_teste/ZaWarudo.png', 'yellow'),
-
-new Stand(2, 'starplatinum', 'jotaro kujo', 'super strength and stop time', {
-    power: [150, 35],//a
-    speed: [220, 55],//a
-    range: [195, 85],//C
-    durability: [150, 112],//a
-    precision: [80, 95],//a
-    potential: [85, 55]//
-}, './imagens_teste/starplatinum.png', 'blue')
-]
+const stands = []
 
 
 
 
-/*conectando a API
+/*conectando a API*/
 
 function apistart() {
-    const url = 'http://localhost:8080/start/api'
-
+    const url = 'http://localhost:8080/jojostands/api'
+/*api local mas é basicamente um json com objetos com os valores abaixos*/
     fetch(url).then((res) => {
         return res.json()
     }).then((data) => {
@@ -88,8 +71,15 @@ function apistart() {
                 data[i].name,
                 data[i].user,
                 data[i].desc,
-                data[i].stats,
-                data[i].image,
+                {
+                    power: (data[i].power).split(','),
+                    speed: (data[i].speed).split(','),
+                    range: (data[i].range).split(','),
+                    durability: (data[i].durability).split(','),
+                    precision: (data[i].precision).split(','),
+                    potential: (data[i].potential).split(',')
+                },
+                data[i].img,
                 data[i].color
 
             );
@@ -103,7 +93,7 @@ function apistart() {
 
 
     })
-}*/
+}
 
 
 
@@ -164,17 +154,11 @@ function load(p) {
     let img = document.getElementById('img')
 
 
-
+    img.setAttribute('src', './img/end.png');
 
     section.style.filter = "invert(100)"
     section.style.backgroundSize = "60%"
     standcard.style.filter = "opacity(0)"
-
-
-
-
-
-
 
     section.style.filter = "invert(100)"
     section.style.backgroundSize = "60%"
@@ -195,7 +179,7 @@ function load(p) {
         desc.innerHTML = stands[p].desc;
         standname.innerHTML = stands[p].name;
         standuser.innerHTML = stands[p].user;
-     
+
         setGraf(p)
     }
 
@@ -238,20 +222,20 @@ function createlist() {
 
 function sch(s) {
     let list = document.getElementById('list')
-    list.innerHTML=""
+    list.innerHTML = ""
     let result = []
-    let indexoff=[]
-   
+    let indexoff = []
+
     for (let i in stands) {
         if (stands[i].name.includes(s)) {
-           result.push(stands[i])
-            result= result.filter((x,y)=>result.indexOf(x)===y)
+            result.push(stands[i])
+            result = result.filter((x, y) => result.indexOf(x) === y)
 
             indexoff.push(stands.indexOf(stands[i]))
-        
 
-        }else{
-            result.splice(i,1)
+
+        } else {
+            result.splice(i, 1)
         }
     }
 
@@ -261,11 +245,11 @@ function sch(s) {
         li.setAttribute('value', indexoff[i]);
         li.setAttribute('onclick', 'load(this.value)')
         list.appendChild(li);
-        li.innerHTML = result[i].name;
+        li.innerHTML = result[i].name.replace(s, `<b class="pesqres">${s}</b>`);
 
 
     }
-    
+
 }
 
 control();
