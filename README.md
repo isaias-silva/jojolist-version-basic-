@@ -16,6 +16,11 @@
     <td>29/08/2021</td>
      <td>application in the beginning</td>
   </tr>
+   <tr>
+    <td>1.0.1</td>
+    <td>14/09/2021</td>
+     <td>finished ready to connect API</td>
+  </tr>
 </table>
 <h2>x & y in Canvas for atributes of stands </h2>
 <table>
