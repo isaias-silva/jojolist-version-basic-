@@ -61,7 +61,7 @@ const stands = []
 /*conectando a API*/
 
 function apistart() {
-    const url = 'http://localhost:8080/jojostands/api'
+    const url = 'https://jojosapi.herokuapp.com/jojostands'
 /*api local mas é basicamente um json com objetos com os valores abaixos*/
     fetch(url).then((res) => {
         return res.json()
