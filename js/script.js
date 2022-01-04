@@ -153,8 +153,13 @@ function load(p) {
     let section = document.getElementById('section')
     let img = document.getElementById('img')
 
-
+    img.onload=function(e){
+        
+    }
     img.setAttribute('src', './img/end.png');
+    
+
+
 
     section.style.filter = "invert(100)"
     section.style.backgroundSize = "60%"
@@ -227,7 +232,7 @@ function sch(s) {
     let indexoff = []
 
     for (let i in stands) {
-        if (stands[i].name.includes(s)) {
+        if (stands[i].name.includes(s.toLowerCase())||stands[i].name.includes(s.toUpperCase())) {
             result.push(stands[i])
             result = result.filter((x, y) => result.indexOf(x) === y)
 
