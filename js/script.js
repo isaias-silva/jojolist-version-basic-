@@ -231,20 +231,15 @@ function sch(s) {
     let result = []
     let indexoff = []
     const letter={lower:s.toLowerCase(),upper:s.toUpperCase(), normal:s}
-    console.log(letter)
+
     for (let i in stands) {
-        for(let y in letter){
-        if (stands[i].name.includes(letter[y])) {
+        if (stands[i].name.includes(letter.normal||letter.lower || letter.upper)) {
             result.push(stands[i])
-            result = result.filter((x, y) => result.indexOf(x) == y)
-            
+            result = result.filter((x, y) => result.indexOf(x) === y)
             indexoff.push(stands.indexOf(stands[i]))
-
-
         } else {
             result.splice(i, 1)
         }
-    }
     }
 
     for (let i in result) {
