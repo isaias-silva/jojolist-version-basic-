@@ -162,11 +162,11 @@ function load(p) {
 
 
     section.style.filter = "invert(100)"
-    section.style.backgroundSize = "60%"
+    section.style.backgroundSize = "50%"
     standcard.style.filter = "opacity(0)"
 
     section.style.filter = "invert(100)"
-    section.style.backgroundSize = "60%"
+    section.style.backgroundSize = "50%"
     standcard.style.filter = "opacity(0)"
 
 
@@ -176,7 +176,7 @@ function load(p) {
     setTimeout(loadenter, 1000)
 
     function loadenter() {
-        section.style.backgroundSize = "70%"
+        section.style.backgroundSize = "60%"
         section.style.filter = "invert(0)"
         standcard.style.filter = "opacity(1)"
         img.setAttribute('src', stands[p].srci);
@@ -230,18 +230,21 @@ function sch(s) {
     list.innerHTML = ""
     let result = []
     let indexoff = []
-
+    const letter={lower:s.toLowerCase(),upper:s.toUpperCase(), normal:s}
+    console.log(letter)
     for (let i in stands) {
-        if (stands[i].name.includes(s.toLowerCase())||stands[i].name.includes(s.toUpperCase())) {
+        for(let y in letter){
+        if (stands[i].name.includes(letter[y])) {
             result.push(stands[i])
-            result = result.filter((x, y) => result.indexOf(x) === y)
-
+            result = result.filter((x, y) => result.indexOf(x) == y)
+            
             indexoff.push(stands.indexOf(stands[i]))
 
 
         } else {
             result.splice(i, 1)
         }
+    }
     }
 
     for (let i in result) {
@@ -250,7 +253,7 @@ function sch(s) {
         li.setAttribute('value', indexoff[i]);
         li.setAttribute('onclick', 'load(this.value)')
         list.appendChild(li);
-        li.innerHTML = result[i].name.replace(s, `<b class="pesqres">${s}</b>`);
+        li.innerHTML = result[i].name.replace(letter, `<b class="pesqres">${letter}</b>`);
 
 
     }

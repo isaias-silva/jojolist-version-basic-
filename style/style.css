@@ -137,7 +137,8 @@ section {
     margin: auto;
     margin-left: 15px;
     border-radius: 20px;
-    background-size: 50%;
+    background-size: 40%;
+    height: auto;
     background-position: center;
     background-repeat: no-repeat;
     transition: 0.25s ease-in-out;
@@ -147,10 +148,10 @@ section {
     margin: auto;
     margin-top: 20px;
     overflow: hidden;
-    width: 90%;
+    width: 100%;
     justify-content: space-between;
     height: 500px;
-    background: rgb(53, 0, 84);
+    background: rgb(109, 0, 172);
     border-radius: 30px;
     border: 1px solid black;
     display: flex;
@@ -167,7 +168,7 @@ section {
 
 #standimage {
     margin: auto;
-    width: 90%;
+    width: 100%;
     overflow: hidden;
     height: 100%;
     background-color: black;
@@ -215,7 +216,9 @@ section {
     text-shadow: 1px 1px 3px white;
     text-align: center;
 }
-
+#standinfo spam{
+    font-size: auto;
+}
 #standstats {
     position: relative;
 }
@@ -233,7 +236,7 @@ section {
 
 #img {
     transition: 0.25s ease-in-out;
-    width: 100%;
+    width: 80%;
 }
 
 #search {
