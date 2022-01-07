@@ -62,7 +62,7 @@ const stands = []
 
 function apistart() {
     const url = 'https://jojosapi.herokuapp.com/jojostands'
-/*api local mas é basicamente um json com objetos com os valores abaixos*/
+
     fetch(url).then((res) => {
         return res.json()
     }).then((data) => {
@@ -248,7 +248,7 @@ function sch(s) {
         li.setAttribute('value', indexoff[i]);
         li.setAttribute('onclick', 'load(this.value)')
         list.appendChild(li);
-        li.innerHTML = result[i].name.replace(letter, `<b class="pesqres">${letter}</b>`);
+   
 
 
     }

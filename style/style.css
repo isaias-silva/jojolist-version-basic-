@@ -215,9 +215,12 @@ section {
     font-weight: bold;
     text-shadow: 1px 1px 3px white;
     text-align: center;
+    
 }
 #standinfo spam{
     font-size: auto;
+  margin:0;
+margin-top: 1px;
 }
 #standstats {
     position: relative;
@@ -352,7 +355,8 @@ footer {
 
     }
 
-    #standinfo{border: none;}
+    #standinfo{border: none; }
+    #standinfo spam,#standinfo p{font-size: 10px;}
 }
 
 @keyframes img {
