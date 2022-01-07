@@ -60,10 +60,11 @@ const stands = []
 
 /*conectando a API*/
 
-function apistart() {
+async function apistart() {
+
     const url = 'https://jojosapi.herokuapp.com/jojostands'
 
-    fetch(url).then((res) => {
+   await fetch(url).then((res) => {
         return res.json()
     }).then((data) => {
         for (let i in data) {
@@ -248,7 +249,7 @@ function sch(s) {
         li.setAttribute('value', indexoff[i]);
         li.setAttribute('onclick', 'load(this.value)')
         list.appendChild(li);
-   
+        li.innerHTML = result[i].name
 
 
     }
