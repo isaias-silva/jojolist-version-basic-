@@ -302,12 +302,13 @@ footer {
         border-radius: 0;
     }
     #flexbox {
-        flex-direction: column-reverse;
+        flex-direction:row;
         margin: auto;
         position: relative;
         top: 0;
         justify-items: center;
     }
+  
     section {
         margin: auto;
         width: 100%;
@@ -358,7 +359,10 @@ footer {
         display: inline-block;
 
     }
-#standlist{min-height: 100px;}
+    #search{width: 60%;}
+#standlist{height:300px; font-size: 10px;}
+#standlist h3 { font-size: 16px;}
+#standlist h3 img{ width: 10px;}
     #standinfo{border: none; }
     #standinfo spam,#standinfo p{font-size: 10px;}
 }
