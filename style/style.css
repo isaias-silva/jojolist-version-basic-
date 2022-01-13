@@ -365,6 +365,7 @@ footer {
 #standlist h3 img{ width: 10px;}
     #standinfo{border: none; }
     #standinfo spam,#standinfo p{font-size: 10px;}
+    #todo{margin-bottom: 0;}
 }
 
 @keyframes img {

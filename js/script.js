@@ -1,3 +1,4 @@
+document.querySelector("body").addEventListener("load",apistart())
 
 class Stand {
     #id
@@ -61,7 +62,7 @@ const stands = []
 /*conectando a API*/
 
  function apistart() {
-    const body=document.querySelector('body')
+    const body=document.querySelector("#todo")
     body.style.display='none'
     const url = 'https://jojosapi.herokuapp.com/jojostands'
 
