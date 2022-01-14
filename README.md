@@ -21,6 +21,11 @@
     <td>14/09/2021</td>
      <td>finished ready to connect API</td>
   </tr>
+     <tr>
+    <td>1.0.2</td>
+    <td>13/01/2022</td>
+     <td>connect API and more ajusts</td>
+  </tr>
 </table>
 <h2>x & y in Canvas for atributes of stands </h2>
 <table>
