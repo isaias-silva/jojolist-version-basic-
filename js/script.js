@@ -63,6 +63,7 @@ const stands = []
 
  function apistart() {
     const body=document.querySelector("#todo")
+   const load=document.querySelector("#iconload")
     body.style.display='none'
     const url = 'https://jojosapi.herokuapp.com/jojostands'
 
@@ -88,6 +89,7 @@ const stands = []
             );
         }
         body.style.display='block'
+        load.style.display='none'
         control()
     }).catch((err) => {
 
