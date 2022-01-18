@@ -300,12 +300,17 @@ footer {
     left: 0;
     display: flex;
     align-items: center;
+    
 }
 
 #iconload img {
-    width: 200px;
+    width: 100px;
     margin: auto;
-    animation: rotate 1s linear infinite;
+    animation: rotate 0.7s linear infinite;
+    border: 4px dashed rgb(0, 0, 0) ;
+    border-top-style:solid ;
+    border-top-color: yellow;
+    border-radius: 100%;
 
 }
 
