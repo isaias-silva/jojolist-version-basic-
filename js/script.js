@@ -224,7 +224,7 @@ function createlist() {
         li.setAttribute('value', i);
         li.setAttribute('onclick', 'load(this.value)')
         list.appendChild(li);
-        li.innerHTML = stands[i].name;
+        li.innerHTML = stands[i].name[0].toUpperCase()+stands[i].name.substring(1);
 
 
     }
@@ -238,7 +238,7 @@ function sch(s) {
     const letter={lower:s.toLowerCase(),upper:s.toUpperCase(), normal:s}
 
     for (let i in stands) {
-        if (stands[i].name.includes(letter.normal||letter.lower || letter.upper)) {
+        if (stands[i].name.includes(letter.normal)||stands[i].name.includes(letter.lower) || stands[i].name.includes(letter.upper)) {
             result.push(stands[i])
             result = result.filter((x, y) => result.indexOf(x) === y)
             indexoff.push(stands.indexOf(stands[i]))
@@ -253,7 +253,7 @@ function sch(s) {
         li.setAttribute('value', indexoff[i]);
         li.setAttribute('onclick', 'load(this.value)')
         list.appendChild(li);
-        li.innerHTML = result[i].name
+        li.innerHTML = result[i].name[0].toUpperCase()+result[i].name.substring(1)
 
 
     }
