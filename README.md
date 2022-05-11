@@ -1,8 +1,8 @@
 # jojolist
 
 <hr>
-<h2>⚠️application in development⚠️</h2>
-<p>frontend so so complete!</p>
+<h2>⚠️application complete⚠️</h2>
+
 <hr>
 
 <table>
