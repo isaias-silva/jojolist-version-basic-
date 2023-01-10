@@ -65,7 +65,7 @@ const stands = []
     const body=document.querySelector("#todo")
    const load=document.querySelector("#iconload")
     body.style.display='none'
-    const url = 'https://jojo-api.herokuapp.com/jojostands'
+    const url = 'https://jojoapi.up.railway.app/'
 
    fetch(url).then((res) => {
         return res.json()
