@@ -65,7 +65,7 @@ const stands = []
     const body=document.querySelector("#todo")
    const load=document.querySelector("#iconload")
     body.style.display='none'
-    const url = 'https://jojoapi.up.railway.app/jojostands'
+    const url = 'https://localhost:8080/jojostands'
 
    fetch(url).then((res) => {
         return res.json()
@@ -92,7 +92,8 @@ const stands = []
         load.style.display='none'
         control()
     }).catch((err) => {
-
+        
+        document.querySelector('#message').innerHTML='erro ao conectar a api. inicie o container da jojoapi em localhost para conectar.'
         document.getElementById('section').style.display = "none"
         document.getElementById('standlist').style.display = "none"
 

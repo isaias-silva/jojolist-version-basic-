@@ -9,7 +9,10 @@
 ul {
     list-style: none;
 }
-
+#message{
+    color:#fff;
+    text-align: center;
+}
 #todo {
     margin: 0%;
 }
