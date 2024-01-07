@@ -65,7 +65,7 @@ const stands = []
     const body=document.querySelector("#todo")
    const load=document.querySelector("#iconload")
     body.style.display='none'
-    const url = 'https://localhost:8080/jojostands'
+    const url = 'http://localhost:4000/stands/get'
 
    fetch(url).then((res) => {
         return res.json()
